@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c195c293-b73e-4b0d-b09a-10a419ec3c35" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ec2-52-209-45-89.eu-west-1.compute.amazonaws.com/LULU.WCFService/LULU_WCF_Service.LULU_Service.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LULU_WCF_Service.xsd" MetadataType="Schema" ID="b8fae006-2e00-4b28-8599-745c19366f03" SourceId="1" SourceUrl="http://ec2-52-209-45-89.eu-west-1.compute.amazonaws.com/LULU.WCFService/LULU_WCF_Service.LULU_Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="LULU_WCF_Service1.xsd" MetadataType="Schema" ID="9f33e284-3ed2-4890-98e7-5e841f2091d8" SourceId="1" SourceUrl="http://ec2-52-209-45-89.eu-west-1.compute.amazonaws.com/LULU.WCFService/LULU_WCF_Service.LULU_Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="LULU_Service.wsdl" MetadataType="Wsdl" ID="69e245f2-b507-4072-8d26-98772ba71317" SourceId="1" SourceUrl="http://ec2-52-209-45-89.eu-west-1.compute.amazonaws.com/LULU.WCFService/LULU_WCF_Service.LULU_Service.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
