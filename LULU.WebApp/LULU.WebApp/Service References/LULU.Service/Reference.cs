@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LULU.WebApp.LULU.Service {
+namespace LULU.Service {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -65,12 +65,12 @@ namespace LULU.WebApp.LULU.Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IStudentChannel : LULU.WebApp.LULU.Service.IStudent, System.ServiceModel.IClientChannel {
+    public interface IStudentChannel : LULU.Service.IStudent, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class StudentClient : System.ServiceModel.ClientBase<LULU.WebApp.LULU.Service.IStudent>, LULU.WebApp.LULU.Service.IStudent {
+    public partial class StudentClient : System.ServiceModel.ClientBase<LULU.Service.IStudent>, LULU.Service.IStudent {
         
         public StudentClient() {
         }
@@ -186,12 +186,12 @@ namespace LULU.WebApp.LULU.Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICampusChannel : LULU.WebApp.LULU.Service.ICampus, System.ServiceModel.IClientChannel {
+    public interface ICampusChannel : LULU.Service.ICampus, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CampusClient : System.ServiceModel.ClientBase<LULU.WebApp.LULU.Service.ICampus>, LULU.WebApp.LULU.Service.ICampus {
+    public partial class CampusClient : System.ServiceModel.ClientBase<LULU.Service.ICampus>, LULU.Service.ICampus {
         
         public CampusClient() {
         }
@@ -317,12 +317,12 @@ namespace LULU.WebApp.LULU.Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IClassChannel : LULU.WebApp.LULU.Service.IClass, System.ServiceModel.IClientChannel {
+    public interface IClassChannel : LULU.Service.IClass, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ClassClient : System.ServiceModel.ClientBase<LULU.WebApp.LULU.Service.IClass>, LULU.WebApp.LULU.Service.IClass {
+    public partial class ClassClient : System.ServiceModel.ClientBase<LULU.Service.IClass>, LULU.Service.IClass {
         
         public ClassClient() {
         }
@@ -480,12 +480,12 @@ namespace LULU.WebApp.LULU.Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IClassRoomChannel : LULU.WebApp.LULU.Service.IClassRoom, System.ServiceModel.IClientChannel {
+    public interface IClassRoomChannel : LULU.Service.IClassRoom, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ClassRoomClient : System.ServiceModel.ClientBase<LULU.WebApp.LULU.Service.IClassRoom>, LULU.WebApp.LULU.Service.IClassRoom {
+    public partial class ClassRoomClient : System.ServiceModel.ClientBase<LULU.Service.IClassRoom>, LULU.Service.IClassRoom {
         
         public ClassRoomClient() {
         }
@@ -593,12 +593,12 @@ namespace LULU.WebApp.LULU.Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICourseChannel : LULU.WebApp.LULU.Service.ICourse, System.ServiceModel.IClientChannel {
+    public interface ICourseChannel : LULU.Service.ICourse, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CourseClient : System.ServiceModel.ClientBase<LULU.WebApp.LULU.Service.ICourse>, LULU.WebApp.LULU.Service.ICourse {
+    public partial class CourseClient : System.ServiceModel.ClientBase<LULU.Service.ICourse>, LULU.Service.ICourse {
         
         public CourseClient() {
         }
@@ -694,12 +694,12 @@ namespace LULU.WebApp.LULU.Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IUserChannel : LULU.WebApp.LULU.Service.IUser, System.ServiceModel.IClientChannel {
+    public interface IUserChannel : LULU.Service.IUser, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class UserClient : System.ServiceModel.ClientBase<LULU.WebApp.LULU.Service.IUser>, LULU.WebApp.LULU.Service.IUser {
+    public partial class UserClient : System.ServiceModel.ClientBase<LULU.Service.IUser>, LULU.Service.IUser {
         
         public UserClient() {
         }
