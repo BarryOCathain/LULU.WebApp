@@ -49,8 +49,7 @@ namespace LULU.WebApp.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
+        [Display(Name = "Staff Number")]
         public string Email { get; set; }
 
         [Required]

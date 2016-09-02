@@ -1,0 +1,48 @@
+﻿@model LULU.WebApp.Models.CourseViewModel
+
+@{ 
+    ViewBag.Title = "Course Details";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@Html.HiddenFor(m => m.CourseID)
+<table>
+    <tr>
+        <td>@Html.LabelFor(m => m.CourseCode)</td>
+        <td>@Html.DisplayFor(m => m.CourseCode)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(m => m.Name)</td>
+        <td>@Html.DisplayFor(m => m.Name)</td>
+    </tr>
+</table>
+<hr />
+<table>
+    <tr>
+        <th class="table-bordered">Name</th>
+        <th class="table-bordered">Date</th>
+        <th class="table-bordered">Start Time</th>
+        <th class="table-bordered">End Time</th>
+        <th class="table-bordered">Compulsory</th>
+    </tr>
+    @foreach (var _class in Model.Classes)
+    {
+        <tr>
+            <td class="table-bordered">@_class.Name</td>
+            <td class="table-bordered">@_class.ClassDate.ToShortDateString()</td>
+            <td class="table-bordered">@_class.StartTime</td>
+            <td class="table-bordered">@_class.EndTime</td>
+            @if (_class.Compulsory)
+            {
+                <td class="table-bordered">Yes</td>
+            }
+            else
+            {
+                <td class="table-bordered">No</td>
+            }
+        </tr>
+    }
+</table>
+<hr />
+@Html.ActionLink("Back", "Index", "Course")

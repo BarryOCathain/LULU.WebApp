@@ -1,0 +1,56 @@
+﻿@model LULU.WebApp.Models.CourseViewModel
+
+@{
+    ViewBag.Title = "Edit Course";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.CourseID)
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.CourseCode)</td>
+            <td>@Html.TextBoxFor(m => m.CourseCode, new { style = "width:350px" })</td>
+            <td>@Html.ValidationMessageFor(m => m.CourseCode)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Name)</td>
+            <td>@Html.TextBoxFor(m => m.Name, new { style = "width:350px" })</td>
+            <td>@Html.ValidationMessageFor(m => m.Name)</td>
+        </tr>
+    </table>
+    <hr />
+    <h3>Classes</h3>
+    <table>
+        <tr>
+            <th class="table-bordered">Name</th>
+            <th class="table-bordered">Date</th>
+            <th class="table-bordered">Start Time</th>
+            <th class="table-bordered">End Time</th>
+            <th class="table-bordered">Compulsory</th>
+        </tr>
+        @foreach (var _class in Model.Classes)
+        {
+            <tr>
+                <td class="table-bordered">@_class.Name</td>
+                <td class="table-bordered">@_class.ClassDate.ToShortDateString()</td>
+                <td class="table-bordered">@_class.StartTime</td>
+                <td class="table-bordered">@_class.EndTime</td>
+                @if (_class.Compulsory)
+                {
+                    <td class="table-bordered">Yes</td>
+                }
+                else
+                {
+                    <td class="table-bordered">No</td>
+                }
+                <td><a href="#"><b>Remove</b></a></td>
+            </tr>
+        }
+    </table>
+    <hr />
+    <input type="submit" name="submit" value="Save Changes" />
+    @Html.ActionLink("Back", "Index", "Course")
+}

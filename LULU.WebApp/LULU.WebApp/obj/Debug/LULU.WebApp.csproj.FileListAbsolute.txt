@@ -88,3 +88,5 @@ C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp\bin\Microso
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp\obj\Debug\LULU.WebApp.dll
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp\obj\Debug\LULU.WebApp.pdb
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp\bin\AutoMapper.dll
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp\bin\AutoMapper.xml

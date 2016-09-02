@@ -58,3 +58,5 @@ C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\D
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\obj\Debug\LULU.WebApp.Tests.csprojResolveAssemblyReference.cache
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\obj\Debug\LULU.WebApp.Tests.dll
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\obj\Debug\LULU.WebApp.Tests.pdb
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml

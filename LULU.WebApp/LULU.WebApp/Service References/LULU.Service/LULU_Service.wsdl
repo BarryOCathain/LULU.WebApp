@@ -210,6 +210,18 @@
   <wsdl:message name="ICourse_GetAllCourses_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllCoursesResponse" />
   </wsdl:message>
+  <wsdl:message name="ICourse_GetCourseByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseByID" />
+  </wsdl:message>
+  <wsdl:message name="ICourse_GetCourseByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICourse_GetCourseByCourseCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseByCourseCode" />
+  </wsdl:message>
+  <wsdl:message name="ICourse_GetCourseByCourseCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseByCourseCodeResponse" />
+  </wsdl:message>
   <wsdl:message name="IUser_AddLecturer_InputMessage">
     <wsdl:part name="parameters" element="tns:AddLecturer" />
   </wsdl:message>
@@ -245,6 +257,12 @@
   </wsdl:message>
   <wsdl:message name="IUser_GetAllUsersOfType_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllUsersOfTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_LoginStaffUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginStaffUser" />
+  </wsdl:message>
+  <wsdl:message name="IUser_LoginStaffUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginStaffUserResponse" />
   </wsdl:message>
   <wsdl:portType name="IStudent">
     <wsdl:operation name="CreateStudent">
@@ -391,6 +409,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ICourse/GetAllCourses" message="tns:ICourse_GetAllCourses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICourse/GetAllCoursesResponse" message="tns:ICourse_GetAllCourses_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetCourseByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICourse/GetCourseByID" message="tns:ICourse_GetCourseByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICourse/GetCourseByIDResponse" message="tns:ICourse_GetCourseByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseByCourseCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICourse/GetCourseByCourseCode" message="tns:ICourse_GetCourseByCourseCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICourse/GetCourseByCourseCodeResponse" message="tns:ICourse_GetCourseByCourseCode_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="IUser">
     <wsdl:operation name="AddLecturer">
@@ -416,6 +442,10 @@
     <wsdl:operation name="GetAllUsersOfType">
       <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetAllUsersOfType" message="tns:IUser_GetAllUsersOfType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetAllUsersOfTypeResponse" message="tns:IUser_GetAllUsersOfType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginStaffUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/LoginStaffUser" message="tns:IUser_LoginStaffUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/LoginStaffUserResponse" message="tns:IUser_LoginStaffUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="StudentServiceEndpoint" type="tns:IStudent">
@@ -738,6 +768,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetCourseByID">
+      <soap:operation soapAction="http://tempuri.org/ICourse/GetCourseByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseByCourseCode">
+      <soap:operation soapAction="http://tempuri.org/ICourse/GetCourseByCourseCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="UserServiceEndpoint" type="tns:IUser">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -788,6 +836,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllUsersOfType">
       <soap:operation soapAction="http://tempuri.org/IUser/GetAllUsersOfType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginStaffUser">
+      <soap:operation soapAction="http://tempuri.org/IUser/LoginStaffUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

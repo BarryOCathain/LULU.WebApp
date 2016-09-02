@@ -590,6 +590,18 @@ namespace LULU.Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICourse/GetAllCourses", ReplyAction="http://tempuri.org/ICourse/GetAllCoursesResponse")]
         System.Threading.Tasks.Task<string> GetAllCoursesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICourse/GetCourseByID", ReplyAction="http://tempuri.org/ICourse/GetCourseByIDResponse")]
+        string GetCourseByID(int courseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICourse/GetCourseByID", ReplyAction="http://tempuri.org/ICourse/GetCourseByIDResponse")]
+        System.Threading.Tasks.Task<string> GetCourseByIDAsync(int courseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICourse/GetCourseByCourseCode", ReplyAction="http://tempuri.org/ICourse/GetCourseByCourseCodeResponse")]
+        string GetCourseByCourseCode(string courseCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICourse/GetCourseByCourseCode", ReplyAction="http://tempuri.org/ICourse/GetCourseByCourseCodeResponse")]
+        System.Threading.Tasks.Task<string> GetCourseByCourseCodeAsync(string courseCode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -650,6 +662,22 @@ namespace LULU.Service {
         public System.Threading.Tasks.Task<string> GetAllCoursesAsync() {
             return base.Channel.GetAllCoursesAsync();
         }
+        
+        public string GetCourseByID(int courseID) {
+            return base.Channel.GetCourseByID(courseID);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetCourseByIDAsync(int courseID) {
+            return base.Channel.GetCourseByIDAsync(courseID);
+        }
+        
+        public string GetCourseByCourseCode(string courseCode) {
+            return base.Channel.GetCourseByCourseCode(courseCode);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetCourseByCourseCodeAsync(string courseCode) {
+            return base.Channel.GetCourseByCourseCodeAsync(courseCode);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -691,6 +719,12 @@ namespace LULU.Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/GetAllUsersOfType", ReplyAction="http://tempuri.org/IUser/GetAllUsersOfTypeResponse")]
         System.Threading.Tasks.Task<string> GetAllUsersOfTypeAsync(string typeString);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/LoginStaffUser", ReplyAction="http://tempuri.org/IUser/LoginStaffUserResponse")]
+        string LoginStaffUser(string staffNumber, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/LoginStaffUser", ReplyAction="http://tempuri.org/IUser/LoginStaffUserResponse")]
+        System.Threading.Tasks.Task<string> LoginStaffUserAsync(string staffNumber, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -766,6 +800,14 @@ namespace LULU.Service {
         
         public System.Threading.Tasks.Task<string> GetAllUsersOfTypeAsync(string typeString) {
             return base.Channel.GetAllUsersOfTypeAsync(typeString);
+        }
+        
+        public string LoginStaffUser(string staffNumber, string password) {
+            return base.Channel.LoginStaffUser(staffNumber, password);
+        }
+        
+        public System.Threading.Tasks.Task<string> LoginStaffUserAsync(string staffNumber, string password) {
+            return base.Channel.LoginStaffUserAsync(staffNumber, password);
         }
     }
 }
