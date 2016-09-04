@@ -33,6 +33,12 @@ namespace LULU.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/UpdateStudent", ReplyAction="http://tempuri.org/IStudent/UpdateStudentResponse")]
         System.Threading.Tasks.Task<bool> UpdateStudentAsync(string studentNumber, string firstName, string surname, string email, string password);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/GetAllStudents", ReplyAction="http://tempuri.org/IStudent/GetAllStudentsResponse")]
+        string GetAllStudents();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/GetAllStudents", ReplyAction="http://tempuri.org/IStudent/GetAllStudentsResponse")]
+        System.Threading.Tasks.Task<string> GetAllStudentsAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/SearchStudentsByFirstName", ReplyAction="http://tempuri.org/IStudent/SearchStudentsByFirstNameResponse")]
         string SearchStudentsByFirstName(string firstName);
         
@@ -113,6 +119,14 @@ namespace LULU.Service {
         
         public System.Threading.Tasks.Task<bool> UpdateStudentAsync(string studentNumber, string firstName, string surname, string email, string password) {
             return base.Channel.UpdateStudentAsync(studentNumber, firstName, surname, email, password);
+        }
+        
+        public string GetAllStudents() {
+            return base.Channel.GetAllStudents();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetAllStudentsAsync() {
+            return base.Channel.GetAllStudentsAsync();
         }
         
         public string SearchStudentsByFirstName(string firstName) {

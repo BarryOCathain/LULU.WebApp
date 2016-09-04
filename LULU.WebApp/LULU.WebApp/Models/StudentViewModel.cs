@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LULU.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -9,6 +10,12 @@ namespace LULU.WebApp.Models
 {
     public class StudentViewModel
     {
+        public StudentViewModel()
+        {
+            Courses = new List<Course>();
+            AttendedClasses = new List<AtttendedClass>();
+        }
+
         public int UserID { get; set; }
 
         [Required]
@@ -22,6 +29,14 @@ namespace LULU.WebApp.Models
         public string Email { get; set; }
 
         [Required]
-        public int MyProperty { get; set; }
+        public int Password { get; set; }
+
+        [Required]
+        [DisplayName("Student Number")]
+        public string StudentNumber { get; set; }
+
+        public List<Course> Courses { get; set; }
+
+        public List<AtttendedClass> AttendedClasses { get; set; }
     }
 }

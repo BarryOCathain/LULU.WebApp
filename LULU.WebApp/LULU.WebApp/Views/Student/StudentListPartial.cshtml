@@ -1,0 +1,29 @@
+﻿@model List<LULU.Model.Student>
+
+@{ 
+    ViewBag.Title = "Students";
+}
+
+<table>
+    <tr>
+        <th>Student Number</th>
+        <th>First Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.StudentNumber</td>
+                <td>@student.FirstName</td>
+                <td>@student.Surname</td>
+                <td>@student.Email</td>
+                <td><a href="Student/Details/@student.UserID"><b>View Details</b></a></td>
+                <td><a href="/Student/Edit/@student.UserID"><b>Edit</b></a></td>
+                <td><a href="/Student/Delete/@student.UserID"><b>Delete</b></a></td>
+            </tr>
+        }
+    }
+</table>

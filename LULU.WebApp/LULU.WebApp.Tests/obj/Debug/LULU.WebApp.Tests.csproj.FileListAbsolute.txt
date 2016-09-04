@@ -60,3 +60,7 @@ C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\obj\D
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\obj\Debug\LULU.WebApp.Tests.pdb
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\LULU.Model.dll
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\AutoMapper.dll
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\LULU.Model.pdb
+C:\Users\DynamicDuo\Source\Repos\LULU.WebApp\LULU.WebApp\LULU.WebApp.Tests\bin\Debug\AutoMapper.xml

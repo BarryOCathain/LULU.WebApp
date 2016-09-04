@@ -1,17 +1,25 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    ViewBag.TItle = "Manage Courses";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<h1>Students</h1>
+<hr />
+<h3>Filter</h3>
+<table>
+    <tr>
+        <td>First Name: </td>
+        <td>@Html.TextBox("FirstName")</td>
+        <td>Surname: </td>
+        <td>@Html.TextBox("Surname")</td>
+    </tr>
+    @*<tr>
+        <td>Surname: </td>
+        <td>@Html.TextBox("Surname")</td>
+    </tr>*@
+</table>
+<hr />
+<div>
+    @Html.Partial("StudentListPartial")
+</div>
+<br />
+<a class="btn btn-default">Add Student</a>
