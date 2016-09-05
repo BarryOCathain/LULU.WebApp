@@ -22,18 +22,21 @@ namespace LULU.WebApp.Models
         [DisplayName("First Name")]
         public string FirstName { get; set; }
 
+        [Required]
         public string Surname { get; set; }
 
         [Required]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
-        public int Password { get; set; }
+        public string Password { get; set; }
 
         [Required]
         [DisplayName("Student Number")]
         public string StudentNumber { get; set; }
+
+        [DisplayName("Password Reset")]
+        public bool ResetPassword { get; set; }
 
         public List<Course> Courses { get; set; }
 

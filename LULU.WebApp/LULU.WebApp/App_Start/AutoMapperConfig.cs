@@ -16,6 +16,9 @@ namespace LULU.WebApp.App_Start
             {
                 cfg.CreateMap<Course, CourseViewModel>();
                 cfg.CreateMap<CourseViewModel, Course>();
+
+                cfg.CreateMap<Student, StudentViewModel>();
+                cfg.CreateMap<StudentViewModel, Student>();
             });
         }
     }

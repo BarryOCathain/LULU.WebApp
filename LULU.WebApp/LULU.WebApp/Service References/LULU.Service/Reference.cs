@@ -39,6 +39,18 @@ namespace LULU.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/GetAllStudents", ReplyAction="http://tempuri.org/IStudent/GetAllStudentsResponse")]
         System.Threading.Tasks.Task<string> GetAllStudentsAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/GetStudentByUserID", ReplyAction="http://tempuri.org/IStudent/GetStudentByUserIDResponse")]
+        string GetStudentByUserID(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/GetStudentByUserID", ReplyAction="http://tempuri.org/IStudent/GetStudentByUserIDResponse")]
+        System.Threading.Tasks.Task<string> GetStudentByUserIDAsync(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/GetStudentByStudentNumber", ReplyAction="http://tempuri.org/IStudent/GetStudentByStudentNumberResponse")]
+        string GetStudentByStudentNumber(string studentNUmber);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/GetStudentByStudentNumber", ReplyAction="http://tempuri.org/IStudent/GetStudentByStudentNumberResponse")]
+        System.Threading.Tasks.Task<string> GetStudentByStudentNumberAsync(string studentNUmber);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudent/SearchStudentsByFirstName", ReplyAction="http://tempuri.org/IStudent/SearchStudentsByFirstNameResponse")]
         string SearchStudentsByFirstName(string firstName);
         
@@ -127,6 +139,22 @@ namespace LULU.Service {
         
         public System.Threading.Tasks.Task<string> GetAllStudentsAsync() {
             return base.Channel.GetAllStudentsAsync();
+        }
+        
+        public string GetStudentByUserID(int userID) {
+            return base.Channel.GetStudentByUserID(userID);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetStudentByUserIDAsync(int userID) {
+            return base.Channel.GetStudentByUserIDAsync(userID);
+        }
+        
+        public string GetStudentByStudentNumber(string studentNUmber) {
+            return base.Channel.GetStudentByStudentNumber(studentNUmber);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetStudentByStudentNumberAsync(string studentNUmber) {
+            return base.Channel.GetStudentByStudentNumberAsync(studentNUmber);
         }
         
         public string SearchStudentsByFirstName(string firstName) {

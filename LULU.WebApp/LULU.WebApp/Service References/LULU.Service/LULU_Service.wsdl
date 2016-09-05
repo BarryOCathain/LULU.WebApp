@@ -30,6 +30,18 @@
   <wsdl:message name="IStudent_GetAllStudents_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllStudentsResponse" />
   </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByStudentNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByStudentNumber" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByStudentNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByStudentNumberResponse" />
+  </wsdl:message>
   <wsdl:message name="IStudent_SearchStudentsByFirstName_InputMessage">
     <wsdl:part name="parameters" element="tns:SearchStudentsByFirstName" />
   </wsdl:message>
@@ -287,6 +299,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IStudent/GetAllStudents" message="tns:IStudent_GetAllStudents_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IStudent/GetAllStudentsResponse" message="tns:IStudent_GetAllStudents_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetStudentByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/GetStudentByUserID" message="tns:IStudent_GetStudentByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/GetStudentByUserIDResponse" message="tns:IStudent_GetStudentByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentByStudentNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/GetStudentByStudentNumber" message="tns:IStudent_GetStudentByStudentNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/GetStudentByStudentNumberResponse" message="tns:IStudent_GetStudentByStudentNumber_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="SearchStudentsByFirstName">
       <wsdl:input wsaw:Action="http://tempuri.org/IStudent/SearchStudentsByFirstName" message="tns:IStudent_SearchStudentsByFirstName_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IStudent/SearchStudentsByFirstNameResponse" message="tns:IStudent_SearchStudentsByFirstName_OutputMessage" />
@@ -489,6 +509,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllStudents">
       <soap:operation soapAction="http://tempuri.org/IStudent/GetAllStudents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentByUserID">
+      <soap:operation soapAction="http://tempuri.org/IStudent/GetStudentByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentByStudentNumber">
+      <soap:operation soapAction="http://tempuri.org/IStudent/GetStudentByStudentNumber" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

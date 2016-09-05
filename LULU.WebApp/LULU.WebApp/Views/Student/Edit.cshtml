@@ -1,0 +1,48 @@
+﻿@model LULU.WebApp.Models.StudentViewModel
+
+@{ 
+    ViewBag.Title = "Edit Student";
+}
+
+<h1>Edit Student</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+
+    @Html.HiddenFor(m => m.UserID)
+    @Html.HiddenFor(m => m.Password)
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.StudentNumber)</td>
+            <td>@Html.EditorFor(m => m.StudentNumber)</td>
+            <td>@Html.ValidationMessageFor(m => m.StudentNumber)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.FirstName)</td>
+            <td>@Html.EditorFor(m => m.FirstName)</td>
+            <td>@Html.ValidationMessageFor(m => m.FirstName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Surname)</td>
+            <td>@Html.EditorFor(m => m.Surname)</td>
+            <td>@Html.ValidationMessageFor(m => m.Surname)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Email)</td>
+            <td>@Html.EditorFor(m => m.Email)</td>
+            <td>@Html.ValidationMessageFor(m => m.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.ResetPassword)</td>
+            <td class="pull-right">@Html.EditorFor(m => m.ResetPassword)</td>
+            <td>@Html.ValidationMessageFor(m => m.ResetPassword)</td>
+        </tr>
+        <tr>
+            <td><input id="submit" type="submit" value="Save Changes" /></td>
+            <td class="pull-right">@Html.ActionLink("Cancel", "Index", "Student")</td>
+        </tr>
+    </table>
+}
