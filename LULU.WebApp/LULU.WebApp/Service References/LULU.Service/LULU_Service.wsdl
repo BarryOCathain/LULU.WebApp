@@ -144,6 +144,12 @@
   <wsdl:message name="IClass_GetClassesByName_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetClassesByNameResponse" />
   </wsdl:message>
+  <wsdl:message name="IClass_GetClassByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClassByID" />
+  </wsdl:message>
+  <wsdl:message name="IClass_GetClassByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClassByIDResponse" />
+  </wsdl:message>
   <wsdl:message name="IClass_GetClassesByStudentNumberAndDateRange_InputMessage">
     <wsdl:part name="parameters" element="tns:GetClassesByStudentNumberAndDateRange" />
   </wsdl:message>
@@ -378,6 +384,10 @@
     <wsdl:operation name="GetClassesByName">
       <wsdl:input wsaw:Action="http://tempuri.org/IClass/GetClassesByName" message="tns:IClass_GetClassesByName_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClass/GetClassesByNameResponse" message="tns:IClass_GetClassesByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClassByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClass/GetClassByID" message="tns:IClass_GetClassByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClass/GetClassByIDResponse" message="tns:IClass_GetClassByID_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetClassesByStudentNumberAndDateRange">
       <wsdl:input wsaw:Action="http://tempuri.org/IClass/GetClassesByStudentNumberAndDateRange" message="tns:IClass_GetClassesByStudentNumberAndDateRange_InputMessage" />
@@ -686,6 +696,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetClassesByName">
       <soap:operation soapAction="http://tempuri.org/IClass/GetClassesByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClassByID">
+      <soap:operation soapAction="http://tempuri.org/IClass/GetClassByID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

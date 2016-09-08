@@ -14,10 +14,12 @@ namespace LULU.WebApp.Controllers
     public class StudentController : Controller
     {
         private Service.StudentClient studentContext;
+        private Service.ClassClient classContext;
 
         public StudentController()
         {
             studentContext = new Service.StudentClient();
+            classContext = new Service.ClassClient();
         }
 
         // GET: Student
@@ -97,6 +99,30 @@ namespace LULU.WebApp.Controllers
             var result = studentContext.DeleteStudent(studentNumber);
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Classes(int id)
+        {
+            var viewModel = new StudentClassesViewModel(id);
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public ActionResult UpcomingClassesPartial(int id)
+        {
+            var student = Serializers<Student>.Deserialize(studentContext.GetStudentByUserID(id));
+            var startDate = DateTime.Now.AddDays(-7);
+            var endDate = DateTime.Now;
+            var classes = classContext.GetClassesByStudentNumberAndDateRange(student.StudentNumber, startDate, endDate, false);
+
+            return View(classes);
+        }
+
+        [HttpPost]
+        public ActionResult Classes(int id, DateTime startDate, DateTime endDate)
+        {
+            return View();
         }
     }
 }

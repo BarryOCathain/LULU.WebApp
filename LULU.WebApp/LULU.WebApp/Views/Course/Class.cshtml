@@ -1,0 +1,42 @@
+﻿@model LULU.WebApp.Models.ClassViewModel
+
+@{ 
+    ViewBag.Title = "Class";
+}
+
+<h1>Class</h1>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.ClassID)
+    @Html.HiddenFor(m => m.CourseID)
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.Name)</td>
+            <td>@Html.EditorFor(m => m.Name)</td>
+            <td>@Html.ValidationMessageFor(m => m.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.ClassDate)</td>
+            <td>@Html.TextBoxFor(m => m.ClassDate, new { @id = "datepicker" })</td>
+            <td>@Html.ValidationMessageFor(m => m.ClassDate)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Compulsory)</td>
+            <td>@Html.EditorFor(m => m.Compulsory)</td>
+            <td>@Html.ValidationMessageFor(m => m.Compulsory)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.StartTime)</td>
+            <td>@Html.EditorFor(m => m.StartTime)</td>
+            <td>@Html.ValidationMessageFor(m => m.StartTime)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.EndTime)</td>
+            <td>@Html.EditorFor(m => m.EndTime)</td>
+            <td>@Html.ValidationMessageFor(m => m.EndTime)</td>
+        </tr>
+    </table>
+    <input type="submit" name="submit" value="Add Class" />
+}

@@ -1,0 +1,26 @@
+﻿@model LULU.WebApp.Models.StudentClassesViewModel
+
+@{ 
+    ViewBag.Title = "Student Classes";
+}
+
+<table>
+    <tr>
+        <td>Start Date: </td>
+        <td><input class="datepicker" type="date" /></td>
+        <td>End Date: </td>
+        <td><input class="datepicker" type="date" /></td>
+    </tr>
+</table>
+<hr />
+<div>
+    @Html.Partial("UpcomingClassesPartial", Model.UpcomingClasses)
+</div>
+<hr />
+<div>
+    @Html.Partial("AttendedClassesPartial", Model.AttendedClasses)
+</div>
+<hr />
+<div>
+    @Html.Partial("MissedClassesPartial", Model.MissedClasses)
+</div>

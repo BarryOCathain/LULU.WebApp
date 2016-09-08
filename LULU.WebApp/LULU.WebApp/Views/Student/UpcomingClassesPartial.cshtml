@@ -1,0 +1,22 @@
+﻿@model List<LULU.Model.Class>
+
+<h3>Upcoming Classes</h3>
+
+<table>
+    <tr>
+        <th>Class Name</th>
+        <th>Class Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+    </tr>
+    @foreach (var _class in Model)
+    {
+        <tr>
+            <td>@_class.Name</td>
+            <td>@_class.ClassDate</td>
+            <td>@_class.StartTime</td>
+            <td>@_class.EndTime</td>
+            <td><a href="/Student/Login/@_class.ClassID"><b>Login</b></a></td>
+        </tr>
+    }
+</table>

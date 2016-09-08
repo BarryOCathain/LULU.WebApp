@@ -20,7 +20,7 @@
                 <td class="table-bordered">@student.FirstName</td>
                 <td class="table-bordered">@student.Surname</td>
                 <td class="table-bordered">@student.Email</td>
-                <td><a href="Student/Details/@student.UserID"><b>View Details</b></a></td>
+                <td><a href="Student/Classes/@student.UserID"><b>View Classes</b></a></td>
                 <td><a href="/Student/Edit/@student.UserID"><b>Edit</b></a></td>
                 <td><b>@Html.ActionLink("Delete", "Delete", new { studentNumber = student.StudentNumber }, 
                       new { onclick = "return confirm('Are you sure that you want to delete this Student?')" })</b></td>

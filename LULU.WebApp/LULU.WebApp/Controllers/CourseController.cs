@@ -99,6 +99,33 @@ namespace LULU.WebApp.Controllers
             return View(viewModel);
         }
 
+        [HttpGet]
+        public ActionResult Class(int id)
+        {
+            return View(new ClassViewModel() { CourseID = id });
+        }
+
+        [HttpPost]
+        public ActionResult Class(ClassViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var _class = Mapper.Map<Class>(viewModel);
+                var course = Serializers<Course>.Deserialize(courseContext.GetCourseByID(viewModel.CourseID));
+
+                if (_class != null)
+                {
+                    _class.Course = course;
+                    var result = classContext.AddClass(Serializers<Class>.Serialize(_class));
+
+                    if (result)
+                        return RedirectToAction("Course", new { id = viewModel.CourseID });
+                }
+                ModelState.AddModelError("", "An Error occurred saving the new Class.");
+            }
+            return View(viewModel);
+        }
+
         private CourseViewModel GetCourseDetails(int courseID)
         {
             var course = Serializers<Course>.Deserialize(courseContext.GetCourseByID(courseID));

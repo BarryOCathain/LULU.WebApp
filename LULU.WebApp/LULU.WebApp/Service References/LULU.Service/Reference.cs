@@ -339,6 +339,12 @@ namespace LULU.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClass/GetClassesByName", ReplyAction="http://tempuri.org/IClass/GetClassesByNameResponse")]
         System.Threading.Tasks.Task<string> GetClassesByNameAsync(string name);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClass/GetClassByID", ReplyAction="http://tempuri.org/IClass/GetClassByIDResponse")]
+        string GetClassByID(int classID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClass/GetClassByID", ReplyAction="http://tempuri.org/IClass/GetClassByIDResponse")]
+        System.Threading.Tasks.Task<string> GetClassByIDAsync(int classID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClass/GetClassesByStudentNumberAndDateRange", ReplyAction="http://tempuri.org/IClass/GetClassesByStudentNumberAndDateRangeResponse")]
         string GetClassesByStudentNumberAndDateRange(string studentNumber, System.DateTime startDate, System.DateTime endDate, bool includeAttendedClasses);
         
@@ -447,6 +453,14 @@ namespace LULU.Service {
         
         public System.Threading.Tasks.Task<string> GetClassesByNameAsync(string name) {
             return base.Channel.GetClassesByNameAsync(name);
+        }
+        
+        public string GetClassByID(int classID) {
+            return base.Channel.GetClassByID(classID);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetClassByIDAsync(int classID) {
+            return base.Channel.GetClassByIDAsync(classID);
         }
         
         public string GetClassesByStudentNumberAndDateRange(string studentNumber, System.DateTime startDate, System.DateTime endDate, bool includeAttendedClasses) {
